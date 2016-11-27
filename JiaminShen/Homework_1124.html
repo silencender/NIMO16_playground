@@ -25,7 +25,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#">现在的这个页面 <span class="sr-only">(current)</span></a></li>
-						<li><a href="http://jwc.sjtu.edu.cn/web/sjtu/198001.htm">教务处</a></li>
+						<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Office&m=Index&a=index&" target="_blank">报到和工作日志</a></li>
 					</ul>
 				</div>
 			</div>
@@ -76,6 +76,49 @@
 			</div>
 			<div class="col-lg-2">	</div>
 		</div>
-		
+		<div class="row" style="margin-top: 20px">
+			<form class="form-inline" action="http://campus.sjtu.edu.cn/bx/adm/ip/result.asp" method="post" name="sf" target="_blank" onsubmit="return InputCheck();">
+				<div class="col-lg-2">	</div>
+				<div class="col-lg-1">
+					<p class="text-center">Campus</p>
+				</div>
+				<div class="col-lg-2">
+					<div class="form-group">
+						<label class="sr-only" for="keywords1">keywords1</label>
+						<input name="keywords1" maxlength="30" class="form-control" value="" style="width: 125%" placeholder="Search Keywords" id="keywords1" onkeyup="javascript:select_field(this.form.typesauto,this.form.keywords1,this.form.types1);" onfocus="javascript:this.select();">
+					</div>
+				</div>
+				<div class="col-lg-1">
+					<div class="form-group">
+						<label class="sr-only" for="types1">types1</label>
+						<select name="types1" id="types1" class="form-control text-center" style="width: 125%" onchange="javascript:syn_field(this.form.typesauto,this.form.types1);">
+							<option value="6">寝室地址</option>
+							<option value="2">学号工号</option>							
+							<option value="1">用户姓名</option>
+							<option value="9">所在班级</option>
+							<option value="13">IP地址</option>
+							<option value="5">MAC地址</option>
+							<option value="4">联系电话</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-1">
+					<div class="form-group">
+						<label class="sr-only" for="typesauto">typesauto</label>
+						<select name="typesauto" id="typesauto" class="form-control text-center" style="width: 100%">
+							<option value="0">-Auto-</option>
+							<option value="1">-Manual-</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-1">
+					<button type="submit" class="btn btn-default" style="width: 100%">搜 索</button>
+				</div>
+				<input type="hidden" name="link" value="and">
+				<input type="hidden" name="stat_select" value="9">
+				<input type="hidden" name="keywords2" value="">
+				<input type="hidden" name="__hash__" value="1ad530ad0575153bb9aa2f5f6c8c94d7">
+			</form>
+		</div>
 	</body>
 </html>
