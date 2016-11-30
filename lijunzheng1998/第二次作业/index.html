@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滑稽的Nimo Campus!</title>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-image: url(bk.jpg)">
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<img src="icon.png" class="img-responsive" alt="" href="#" height=50px width=50px/>			
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li><a href="#"><p style="font-size:2em"><strong>Nimo Campus</strong></p></a></li>
+					<li class="active"><a href="#"><p style="font-size:1em">用户信息检索</p></a></li>
+					<li><a href="#"><p style="font-size:1em">用户信息录入</p></a></li>
+					<li><a href="#"><p style="font-size:1em">给滑稽的网管部留言</p></a></li>
+					<li style="position:fixed;top:15px;right:5%">						
+					<form action="#"  class="form-inline">
+						<div class="form-group" >
+							<input type="text" class="form-control" placeholder="全局检索"/>
+							<button type="submit" class="btn btn-primary">检索</button>
+						</div>						
+					</form>
+					</li>
+                </ul>
+			</div>
+		</div>
+	</nav>
+
+	<div style="width=80%;box-shadow:0px 0px 10px rgb(50,0,0);background-color:rgb(249,204,226);">
+		<h4>当前登陆的网管员：未登录</h4>
+		<form action="#" class="form-inline">
+			<div class="container" style="width">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="login1">User ID</label>
+						<input type="text" name="id" id="login1" class="form-control" placeholder="网管员ID">
+					</div>					
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="login2">Passwd</label>
+						<input type="password" name="pd" id="login2" class="form-control" placeholder="密码">
+					</div>					
+				</div>
+				
+				<div class="col-md-2 col-md-offset-3">
+					<button class="btn btn-primary" type="submit">登陆！</button>					
+				</div>
+			</div>
+		</div>
+		</form><br/>		
+	</div>
+	<br/>
+
+	<div class="container" style="width:90%;background-color:white">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="col-md-11">
+					<h3>用户信息检索</h3><br/>
+					<form action="">
+						<div class="form-group">
+							<label for="search1">用户姓名:</label>
+							<input type="text" name="n" id="search1" class="form-control" placeholder="用户姓名">
+						</div>	
+						<div class="form-group">
+							<label for="search2">学号：</label>
+							<input type="text" name="i" id="search2" class="form-control" placeholder="学号">
+						</div>	
+						<div class="form-group">
+							<label for="search3">手机号：</label>
+							<input type="text" name="p" id="search3" class="form-control" placeholder="手机号">
+						</div>	
+						<div class="form-group">
+							<label for="search4">寝室号：</label>
+							<input type="text" name="d" id="search4" class="form-control" placeholder="寝室号">
+						</div>	
+						<button type="submit" class="btn btn-primary">滑稽一下，你就知道</button>
+						<br/>
+					</form>
+				</div>
+			</div>
+
+			<div class="col-md-5">
+				<h3>广泛搜索</h3>
+				<table class="table table-striped table-hover">
+					<tr>
+						<td><b>姓名</b></td>
+						<td><b>学号</b></td>
+						<td><b>寝室地址</b></td>
+						<td><b>详细信息</b></td>
+					</tr>
+					<tr>
+						<td>滑稽树上</td>
+						<td>516020910000</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+					<tr>
+						<td>滑稽果</td>
+						<td>516020910001</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+					<tr>
+						<td>滑稽树下</td>
+						<td>516020910002</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+					<tr>
+						<td>你和我</td>
+						<td>516020910003</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+					<tr>
+						<td>滑稽树前</td>
+						<td>516020910004</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+					<tr>
+						<td>做游戏</td>
+						<td>516020910005</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+					<tr>
+						<td>滑稽多又多</td>
+						<td>516020910006</td>
+						<td>S16-510</td>
+						<td><a href="#">点击查看详细信息</a></td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="col-md-4">
+				<h3>详细信息:</h3>
+					照片：<img src="hj.jpg" alt="" width=100px height=100px style="position:relative;left:130px;"/><br/><br/>
+					<p>姓名：滑稽</p>
+					<p>备注：你不登陆我怎么可能给你查找信息【滑稽】</p>
+					<p>手机号码：138 0013 8000</p>
+					<p>学号：516 020 910 200</p>
+					<p>寝室号：S16-510</p>
+					<p>物理地址:FF:FF:FF:FF:FF:FF</p>
+					<p>IP地址:59.44.61.24</p>
+					<p>有效期限：2099-12-31</p>
+			</div>		
+
+		</div>		
+	</div>
+	
+	</div>
+</body>
+</html>
