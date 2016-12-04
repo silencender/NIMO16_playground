@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+  var oTop = document.getElementById("to_top");
+  document.onmousemove = function(evt){
+    var oEvent = evt || window.event;
+    var scrollleft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+    oTop.style.left = oEvent.clientX + scrollleft +10 +"px";
+    oTop.style.top = oEvent.clientY + scrolltop + 10 + "px";
+  }
+}
+</script>
+</head>
+
+<body style="height:1000px;">
+<div id="to_top" style="width:30px; height:40px;background:#06c; position:absolute;"></div>
+</body>
+</html>
