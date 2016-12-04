@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>login</title>
+		<title>Sign in</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/blueimp-md5/2.6.0/js/md5.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="login.js"></script>
 	</head>
-	<body style="background:url(http://t.cn/RfCOG24) fixed center center no-repeat;
+	<body style="background:url(http://ww4.sinaimg.cn/large/95986411jw1f5y5n7ui4oj21kw0w0wp8.jpg) fixed center center no-repeat;
 		background-size: cover;
 		width: 100%;">
-		<div class="container" style="position:fixed;left:40%;top:34%;width:300px;padding:10px 40px 40px;background-color: rgba(255,255,255,0.4); border-radius: 8px;box-shadow: 0px 0px 10px gray;">
-			<h1 style="text-align: center">Sign in</h1>
-			<form class="form-horizonal">
+		<div id="container" class="container" style="max-width:300px;padding:10px 40px 40px;background-color: rgba(255,255,255,0.4); border-radius: 8px;box-shadow: 0px 0px 10px gray;">
+			<h1 id="head" style="text-align: center">Sign in<a href="javascript:void(0)" onclick="signup()" style="font-size: 0.6em">/up</a></h1>
+			<form id="form" class="form-horizonal" method="post">
 				<div class="form-group">
-					<label for="user">User:</label>
-					<input type="text" id="user" name="username" class="form-control" placeholder="User" />
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" class="form-control" placeholder="Email" />
-				</div>
-				<div class="form-group">
-					<label for="psd">Password:</label>
-					<input type="password" id="psd" name="psd" class="form-control" placeholder="Password" />
-				</div>
-				<div class="checkbox">
+                    <label for="user">Username\Email:</label>
+                    <input type="text" id="user" name="username" class="form-control" placeholder="Name or Email" />
+                    <p id="noemail_uid" style="color:red;display: none;">Please don't take email as name</p>
+                    <p id="invalid_uid" style="color:red;display: none;">Please input your username</p>
+                    <p id="name_used" style="color:red;display: none;">Name already used</p>
+                </div>
+                <div id="form_email" style="display:none;" class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" />
+                    <p id="invalid_email" style="color:red;display: none;">Invalid Email</p>
+                    <p id="email_used" style="color:red;display: none;">Email already used</p>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" class="form-control" placeholder="Password" />
+                    <p id="invalid_pwd" style="color:red;display: none;">Please input password</p>
+                    <p id="server_error" style="color:red;display: none;">Internal server error occurred</p>
+                    <p id="login_fail" style="color:red;display: none;">Please check your username and password</p>
+                </div>
+				<div id="save" class="checkbox">
 					<label>
-						<input type="checkbox"> Remember me
+						<input type="checkbox" onclick="javascript:$('input[name=save]').val(this.checked)" /> Remember me
 					</label>
 				</div>
-				<button type="submit" class="btn btn-primary pull-right">Submit</button>
+				<input type="hidden" name="save" value="false"/>
+				<input type="hidden" name="method" value="signin"/>
+				<input type="hidden" name="time" />
 			</form>
+            <div>
+			<button id="submit" class="btn btn-primary pull-right">Submit</button>
+            <div>
+            </div>
 		</div>
 	</body>
 </html>
