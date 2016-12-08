@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>
+		jump jump move move
+	</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oTop = document.getElementById("to_mouse");
+			document.onmousemove = function(evt){
+				var oEvent = evt || window.event;
+				var scrollleft = document.documentElement.scrollLeft || document.body.scrollLeft;
+				var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+				oTop.style.left = oEvent.clientX + scrollleft +10 +"px";
+				oTop.style.top = oEvent.clientY + scrolltop + 10 + "px";
+			}
+		}
+		$(document).ready(function(){
+			$("#dropmenu").hover(function(){
+				$("#submenu").slideToggle();
+			})
+		})
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" style="color:pink">WhirlFourEye</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="#">shiina mashiro赛高~</a>
+					</li>
+					<li id="dropmenu">
+						<a href="#">NIMO</a>
+						<ul class="dropdown-menu" id="submenu" style="display: none;">
+							<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Office&m=Index&a=index" target="_blank" style="display: block;">上班报到来不及啦>_<</a></li>
+							<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Admin&m=Index&a=index" target="_blank" style="display: block;">有没有用户请求和报修呢</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="demo" style="overflow: hidden;position: fixed;left: 0%;top: 0%;height: 1000px">
+		<div id="demo1"><img src="63490816008079500020304918043.jpg" style="width: 100%"></img></div>
+		<div id="demo2"></div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    var speed=70;
+		    demo2.innerHTML=demo1.innerHTML;
+			function Marquee(){
+				if(demo2.offsetTop-demo.scrollTop<=0)
+					demo.scrollTop-=demo1.offsetHeight;
+				else{
+					demo.scrollTop++;
+				}
+			}
+		    setInterval(Marquee,speed);
+		})
+		function check(){
+			if ($("#pass").val()=="" && $("#input_password").data("flag")!=1){
+				$("#input_password").append('<div class="warning" style="color: red;" id="warning">Please enter the password.</div>')
+				$("#input_password").data("flag",1);
+			}if ($("#pass").val()!=""){
+				$("#input_password").data("flag",0);
+				if ($("#input_password").data("flag")==1) $("#warning").remove();
+				$.post("http://nimo.sjtu.edu.cn/aton/index.php?g=Admin&m=Index&a=index&");
+				window.open("http://nimo.sjtu.edu.cn/aton/index.php?g=Admin&m=Index&a=index&");
+			}
+		}
+	</script>
+	<div class="row" style="margin-top: 70px;">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-4">
+			<div class="container" style="width: 330px;padding:0px 20px 20px;background-color: rgba(255,255,255,0.4); border-radius: 4px;box-shadow: 0px 0px 5px gray;">
+				<form>
+					<h1 style="text-align: center;"><strong>登录JAccount</strong></h1>
+			        <input type="hidden" name="sid" value="jatgjxcy090508">
+			        <input type="hidden" name="returl" value="CJE8hiG/ChR9XBvmlwKwsOoJCovE7UxhTP8REF/rcb/6oSONpAgu1GzFMHTT97rvK1hvNea/4XXjwlAy3k2ozgE=">
+			        <input type="hidden" name="se" value="CJk/WiOJSPz9smLXBrIp1Oao2zMmOAD1/TcRvnaNFKNgG77K5apDFjU=">
+			        <input type="hidden" name="v" value="">
+			        <div class="form-group">
+			        	<label for="user">User: </label>
+			            <input class="form-control" type="text" id="user" name="user" placeholder="jAccount用户名" autocomplete="off">
+			        </div>
+			        <div class="form-group" id="input_password">
+			        	<label for="pass">Password: </label>
+			            <input class="form-control" type="password" id="pass" name="pass" placeholder="jAccount密码" autocomplete="off">
+			        </div>
+			    </form>
+			    <div>
+		            <input type="submit" onclick="check()" class="btn btn-primary form-submit pull-right" value="登 录">
+		        </div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="container" style="width: 330px;padding:0px 20px 20px;background-color: rgba(255,255,255,0.4); border-radius: 4px;box-shadow: 0px 0px 5px gray;">
+				<form action="http://campus.sjtu.edu.cn/bx/adm/ip/result.asp" method="post" name="sf" target="_blank" onsubmit="return InputCheck();">
+					<h1 style="text-align: center;"><strong>Campus快速查询</strong></h1>
+					<div class="form-group">
+						<label for="key">关键字</label>
+						<input class="form-control" id="key" name="keywords1" maxlength="30" size="24" class="put" value="" placeholder="Search Keywords" onkeyup="javascript:select_field(this.form.typesauto,this.form.keywords1,this.form.types1);" onfocus="javascript:this.select();">
+					</div>
+					<div class="form-group">
+						<label>搜索类型</label>
+						<div class="form-input">
+							<div class="col-lg-5">
+								<select name="types1" class="put" onchange="javascript:syn_field(this.form.typesauto,this.form.types1);">
+									<option value="6">-寝室地址-</option>
+									<option value="13">—IP地址-</option>
+									<option value="20">—IP网段—</option>
+									<option value="5">-MAC地址-</option>
+								 	<option value="1">-用户姓名-</option>
+								  	<option value="4">-联系电话-</option>
+								  	<option value="8">-申请时间-</option>
+								  	<option value="2">-学号工号-</option>
+								  	<option value="9">-所在班级-</option>
+								  	<option value="10">-所在院系-</option>
+								 	<option value="7">-电子邮件-</option>
+								  	<option value="14">-用户状态-</option>
+								  	<option value="15">-信息服务-</option>
+								  	<option value="3">—长IP地址-</option>
+								  	<option value="33">-注销日期-</option>
+								  	<option value="34">-修改时间-</option>
+								  	<option value="0">-无对应-</option>
+							 	</select>
+							</div>
+							<div class="col-lg-2">
+							 	<select name="typesauto" class="put">
+							 		<option value="0">-Auto-</option>
+							 		<option value="1">-Manual-</option>
+							 	</select>
+							</div>
+						</div>
+					</div>
+					<button name="submit" type="submit" class="btn btn-primary pull-right" style="margin-top: 35px">搜索</button>
+					<input type="hidden" name="link" value="and">
+					<input type="hidden" name="stat_select" value="9">
+					<input type="hidden" name="keywords2" value="">
+					<input type="hidden" name="__hash__" value="173b998b733510e927e7d9d3a0048d95">
+				</form>
+			</div>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
+	<div class="row" style="margin-top: 30px;">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-8">
+			<form class="input-group input-group-lg" action="http://www.baidu.com/s" target="blank">
+				<input type="search" class="form-control" placeholder="百度一下，你就知道" name="wd"/>
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="submit" style="width: 150px">Search</button>
+				</span>
+			</form>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
+	<script type="text/javascript">
+		function jump(now){
+			$(now).animate({
+				top:'-=20px'
+			},"slow")
+			$(now).animate({
+				top:'+=20px'
+			},"slow",function(){
+				jump(now);
+			})
+			
+		}
+		function back(now){
+			$(now).stop(goToEnd=true);
+			$(now).animate({
+				top:'0px'
+			},"slow")
+		}
+	</script>
+	<div class="row" style="margin-top: 30px;">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-2" id="friend_link_1" onmouseover="jump(this)" onmouseout="back(this)">
+			<a href="http://fanyi.baidu.com" target="blank">
+				<img src="http://fanyi.baidu.com/static/translation/img/header/logo_cbfea26.png" style="width: 140px;height: 60px;">
+			</a>
+		</div>
+		<div class="col-lg-2" id="friend_link_2" onmouseover="jump(this)" onmouseout="back(this)">
+			<a href="http://www.bilibili.com" target="blank">
+				<img src="http://i2.sinaimg.cn/gm/2014/1224/U10514P115DT20141224100553.jpg" style="width: 140px;height: 70px;">
+			</a>
+		</div>
+		<div class="col-lg-2" id="friend_link_3" onmouseover="jump(this)" onmouseout="back(this)">
+			<a href="http://i.qq.com" target="blank">
+				<img src="http://pic.qiantucdn.com/58pic/12/20/87/73G58PICNRK.jpg" style="width: 130px;height: 70px;">
+			</a>
+		</div>
+		<div class="col-lg-2" style="width: 140px" id="friend_link_4" onmouseover="jump(this)" onmouseout="back(this)">
+			<a href="mk1st assignment.html" target="blank">
+				<div style="width: 140px;height: 70px;background-color: yellow">
+					<label style="position: relative;left: 18%;top: 34%"><strong>这是一个彩蛋</strong></label>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
+	<div id="to_mouse" style="position: absolute;">
+		<img src="mk_logo.ico"></img>
+	</div>
+	<!--<p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>-->
+</body>
+</html>

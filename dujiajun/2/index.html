@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>NIMO主页自定义</title>
+		<meta charset="utf-8">
+		<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body style="background:url(1920x1080.jpg) no-repeat;">
+		
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">学生宿舍网络信息系统</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#home">主页</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								服务
+								<b class="caret"></b>
+								<ul class="dropdown-menu">
+									<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Home&m=Index&a=newapply&">申请开网</a></li>
+									<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Home&m=Index&a=viewinfo&">网络信息查询</a></li>
+									<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Cuddles&m=request&a=add_ui&type=MAC#">更换MAC或寝室</a></li>
+									<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Home&m=Index&a=help&">自助报修</a></li>
+								</ul>
+							</a>
+						</li>
+						<li><a href="#about">关于NIMO</a></li>
+						<li><a href="#contact">联系我们</a></li>
+					</ul>
+				</div>
+				<div>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="搜索大新闻">
+						</div>
+						<button type="submit" class="btn btn-default">搜索</button>
+					</form>
+				</div>
+				<ul class="nav navbar-nav navbar-right"> 
+					<li><a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Home&m=Index&a=login&"><span class="glyphicon glyphicon-user"></span>登录</a></li> 
+				</ul> 
+			</div>
+		</nav>
+		<div class="container" style="width:80%;background-color:rgba(255,255,255,0.3);">
+			<div class="row">
+				<div class="col-md-3" >
+					<table class="table table-striped table-hover">
+						<caption><h4>我的信息</h4></caption>
+						<tbody>
+							<tr>
+								<td>学号：</td>
+								<td>233333333333</td>
+							</tr>
+							<tr>
+								<td>姓名：</td>
+								<td>滑稽</td>
+							</tr>
+							<tr>
+								<td>房间：</td>
+								<td>S18-202</td>
+							</tr>
+							<tr>
+								<td>电话：</td>
+								<td>23333333333</td>
+							</tr>
+							<tr>
+								<td>MAC地址：</td>
+								<td>0F-0F-00-00-00-00</td>
+							</tr>
+							<tr>
+								<td>IP：</td>
+								<td>59.78.128.61</td>
+							</tr>
+							<tr>
+								<td>网关：</td>
+								<td>59.78.128.1</td>
+							</tr>
+							<tr>
+								<td>子关掩码：</td>
+								<td>255.255.255.0</td>
+							</tr>
+							<tr>
+								<td>DNS：</td>
+								<td>114.114.114.114</td>
+							</tr>
+							<tr>
+								<td>IP：</td>
+								<td>59.78.128.61</td>
+							</tr>
+							<tr>
+								<td>状态：</td>
+								<td>正常</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-6" >
+					<table class="table table-striped table-hover">
+						<caption><h4>NIMO的大新闻</h4></caption>
+						<tbody>
+							<tr>
+								<td>网站维护公告</td>
+								<td>2016-11-10</td>
+							</tr>
+							<tr>
+								<td>关于2016-10-28周五晚上6-8值班时间调整通知</td>
+								<td>2016-10-27</td>
+							</tr>
+							<tr>
+								<td>网管部中心组人事变动</td>
+								<td>2016-10-10</td>
+							</tr>
+							<tr>
+								<td>2016年闵行网管部人事变动</td>
+								<td>2016-10-08</td>
+							</tr>
+							<tr>
+								<td>国庆节网管部值班报修安排</td>
+								<td>2016-09-28</td>
+							</tr>
+						</tbody>
+					</table>
+					<h4>NIMO的秋游</h4>
+					<div id="myCarousel" class="carousel slide">
+					
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>   
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="802.jpg"  alt="First slide">
+							</div>
+							<div class="item">
+								<img src="801.jpg"  alt="Second slide">
+							</div>
+							<div class="item">
+								<img src="800.jpg"  alt="Third slide">
+							</div>
+						</div>
+						<a class="carousel-control left" href="#myCarousel" 
+							data-slide="prev">&lsaquo;
+						</a>
+						<a class="carousel-control right" href="#myCarousel" 
+							data-slide="next">&rsaquo;
+						</a>
+					</div>
+					
+				</div>
+				<div class="col-md-3" >
+					<h4>常用链接</h4>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="http://www.sjtu.edu.cn/">交大主页</a></li>
+						<li class="list-group-item"><a href="http://www.jwc.sjtu.edu.cn/">本科教学信息网</a></li>
+						<li class="list-group-item"><a href="http://electsys.sjtu.edu.cn/">教学信息服务网</a></li>
+						<li class="list-group-item">研究生院</li>
+						<li class="list-group-item">图书馆</li>
+						<li class="list-group-item">交大邮箱</li>
+						<li class="list-group-item">交大财务</li>
+						<li class="list-group-item">网络中心</li>
+						<li class="list-group-item">家园网</li>
+						<li class="list-group-item">葡萄</li>
+						<li class="list-group-item">小视频
+						<video src="v6.MP4" controls="controls" width="240px" height="160px"></video>
+						</li>
+						
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
