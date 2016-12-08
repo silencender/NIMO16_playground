@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav").mouseenter(function(){
+				$("#hiddenMenu").show(1000)
+			})
+			$("#hiddenMenu").mouseout(function(){
+				$("#hiddenMenu").hide(1000)
+			})
+			$("#submitBtn").click(function(){
+				$(".container").empty().append("你被盗号了")
+			})
+		})
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid" id="nav">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">导航栏测试</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="http://www.bilibili.com">B站</a>
+					</li>
+					<li>
+						<a href="http://www.dilidili.com">D站</a>
+					</li>
+					<li>
+						<a href="http://nimo.sjtu.edu.cn">NIMO</a>
+						<ul class="nav navbar-nav" id="hiddenMenu">
+							<li>
+								<a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Home&m=Index&a=login&">登录</a>
+							</li>
+							<li>
+								<a href="http://nimo.sjtu.edu.cn/aton/index.php?g=Admin&m=Index&a=index&">开网</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class='header'>
+		
+	</div>
+	<div class="container" style="position: fixed;left:35%;top:24%;width:30%;background-color: rgba(255,255,255,0.4);padding: 10px;border-radius: 5px">
+		<form class="container-horizonal">
+			<div class="form-group">
+				<label for="user">用户</label>
+				<input type="text" name="username" id="user" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="password">密码</label>
+				<input type="password" name="password" id="password" class="form-control">
+			</div>
+			<button id="submitBtn" style="position:relative;width: 40%;left: 30%">提交</button>
+		</form>
+	</div>
+	<div class="footer">
+		
+	</div>
+</body>
+
+</html>
