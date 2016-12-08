@@ -1,0 +1,31 @@
+body {
+	background:url(http://furl.ml/zoe7E) fixed center center no-repeat;
+	background-size: cover;
+	width: 100%;
+}
+#container {
+	max-width:300px;
+	padding:10px 40px 40px;
+	background-color: rgba(255,255,255,0.4); 
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px gray;
+}
+#container > h1{
+	text-align: center;
+}
+.warning {
+	color:red;
+	display: none;
+}
+a:link,a:visited{
+    color:#555d66;
+    text-decoration:none;
+}
+a:hover{
+    color:#0073aa;
+    text-decoration:none;
+}
+a:active{
+    color: #444;
+    text-decoration:none;
+}
